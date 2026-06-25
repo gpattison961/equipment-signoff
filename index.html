@@ -452,7 +452,7 @@ async function handleSubmit() {
     if (navigator.share && navigator.canShare) {
       var file = new File([pdfBlob], filename, { type: 'application/pdf' });
       if (navigator.canShare({ files: [file] })) {
-        await navigator.share({ files: [file], title: 'Equipment Sign-Off' });
+        await navigator.share({ files: [file] });
         document.getElementById('successMsg').textContent = 'PDF shared. Tap "Save to Drive" or "Save to Files" from the Share Sheet.';
         document.getElementById('mainForm').style.display = 'none';
         document.getElementById('successScreen').style.display = 'block';
