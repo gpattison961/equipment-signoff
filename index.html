@@ -485,6 +485,9 @@ function resetForm() {
   removePhoto();
   clearSig();
   setDateDefault();
+  var btn = document.getElementById('submitBtn');
+  btn.disabled = false;
+  btn.innerHTML = '<i class="ti ti-share" aria-hidden="true"></i> Submit &amp; share PDF';
   document.getElementById('mainForm').style.display = 'block';
   document.getElementById('successScreen').style.display = 'none';
   window.scrollTo(0, 0);
